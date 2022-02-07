@@ -41,4 +41,5 @@ class Public::UsersController < ApplicationController
     end
   end
 
+
 end
