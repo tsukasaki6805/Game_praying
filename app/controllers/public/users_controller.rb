@@ -3,7 +3,7 @@ class Public::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @games = @user.books
+    @games = @user.games
     @game = Game.new
   end
 
@@ -16,14 +16,14 @@ class Public::UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     if @user != User.find(current_user.id)
-      redirect_to user_path(current_user)
+      redirect_to public_user_path(current_user)
     end
   end
 
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: "You have updated user successfully."
+      redirect_to public_user_path(@user), notice: "You have updated user successfully."
     else
       render 'edit'
     end
@@ -37,7 +37,7 @@ class Public::UsersController < ApplicationController
   def ensure_correct_user
     @user = User.find(params[:id])
     unless @user == current_user
-      redirect_to user_path(current_user)
+      redirect_to public_user_path(current_user)
     end
   end
 
