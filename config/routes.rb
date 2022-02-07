@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 # 顧客用
-# URL /customers/sign_in ...
-devise_for :customers,skip: [:passwords,], controllers: {
+# URL /users/sign_in ...
+devise_for :users,skip: [:passwords,], controllers: {
   registrations: "public/registrations",
   sessions: 'public/sessions'
 }
@@ -9,7 +9,7 @@ devise_for :customers,skip: [:passwords,], controllers: {
 root 'homes#top'
   get 'homes/about' => 'homes#about'
 
-namespace :public do #namespace :customersをpublicに変更しました。
+namespace :public do #namespace :usersをpublicに変更しました。
 end
 
 # 管理者用
