@@ -7,6 +7,7 @@ class Public::UsersController < ApplicationController
     @game = Game.new
   end
 
+
   def index
     @users = User.all
     @game = Game.new
