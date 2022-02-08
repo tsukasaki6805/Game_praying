@@ -1,0 +1,27 @@
+<div class="top-container">
+  <br>
+<div class="container">
+  <div class=" row justify-content-center">
+      <div class="top text-center">
+        <div class="top-explanation">
+        <h2><strong>ようこそ、Game_prayingへ！</strong></h2><br>
+        <h4>
+         このサイトは、色々なゲームの投稿サイトになります。<br>
+         ご利用の際はお手数が、<br>
+         ユーザー登録が必要になります。<br>
+        </h4>
+        </div>
+      </div>
+      <br>
+  </div>
+  <div class="row justify-content-center">
+    <div>
+      <% if admin_signed_in? %>
+      <h3><%= link_to "全てのユーザーを見る", admin_users_path, class:"list" %></h3>
+      <% else %>
+      <h3><%= link_to "全ての投稿を見る", public_games_path, class:"list" %></h3>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
