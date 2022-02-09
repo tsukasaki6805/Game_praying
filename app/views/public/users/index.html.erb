@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+     <h2>User info</h2>
+      <%= render 'users/profile', user: @user %>
+      <h2>New book</h2>
+      <%= render 'games/newform', book: @book %>
+    </div>
+    <div class="col-xs-9">
+      <table class="table">
+        <h1>Users</h1>
+        <tread>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @users.each do |user| %>
+
+          <tr>
+            <td>
+              <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format:'jpeg', class: "pull-left profile-img", fallback:"no_image.jpg" %>
+            </td>
+            <td>
+              <%= user.nickname %>
+            </td>
+            <td>
+              <%= link_to "Show", public_user_path(user.id), class: "user_#{user.id}" %>
+            </td>
+          </tr>
+
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
