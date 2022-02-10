@@ -1,0 +1,48 @@
+<div class="container">
+<div class="row">
+	<div class="col-xs-3">
+
+		<h2>User info</h2>
+		<%= render 'users/profile', user: current_user %>
+
+		<h2>New Game</h2>
+		<%= render 'games/newform', game: @game %>
+
+	</div>
+
+	<div class="col-xs-9">
+		<h2>Games</h2>
+		<!--games一覧 -->
+		<table class="table table-hover table-inverse">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Title</th>
+					<th>Opinion</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @games.each do |game| %>
+				 <%= link_to public_game_path(game.id) do %>
+         <% end %>
+				<tr>
+					<td>
+						<%= link_to public_game_path(game.user) do %>
+							<%= attachment_image_tag(game.user, :profile_image, :fill, 50, 50, fallback: "no-image-mini.jpg") %>
+						<% end %>
+					</td>
+					<td><%= link_to game.title, public_game_path(game), class: "game_#{game.id}" %></td>
+					<td><%= game.body %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+		<!--games一覧 -->
+
+
+	</div>
+</div>
+</div>
