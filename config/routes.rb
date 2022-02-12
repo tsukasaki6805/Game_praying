@@ -20,6 +20,7 @@ namespace :public do #namespace :usersをpublicに変更しました。
 
   resources :games, only: [:index, :show] do
    resource :favorites, only: [:create, :destroy]
+   resources :game_comments, only: [:create, :destroy]
  end
 
   get 'users/unsubscribe' => 'users#unsubscribe'
