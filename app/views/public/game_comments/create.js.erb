@@ -1,0 +1,1 @@
+$(".comment_list_<%= @game.id %>").html("<%= j(render 'game_comments/comment', game_comments: @game_comments, game: @game, comment: @comment) %>");

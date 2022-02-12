@@ -1,0 +1,22 @@
+<% game_comments.each do |comment| %>
+  <tr>
+　<td>
+　  <%= comment.comment %>
+　</td>
+　<td>
+　  <% if comment.user == current_user %>
+      <%= link_to "Destroy", public_game_comment_path(game, comment), method: :delete, remote:true, class: "btn btn-danger" %>
+    <% end %>
+
+　</td>
+
+  </tr>
+<% end %>
+
+  <div class="comment-list bt style-2" id="comments">
+    <div class="float-wrapper">
+      <td></td>
+      <td><h2 class="comment-count"><span id="game_comments_count"><%= game_comments.count %>件コメント</sapn></h2></td>
+      <td></td>
+    </div>
+  </div>
