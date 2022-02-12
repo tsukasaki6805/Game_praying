@@ -18,7 +18,9 @@ namespace :public do #namespace :usersをpublicに変更しました。
       patch '/users/withdrawal' => 'users#withdrawal', as: 'withdrawal'
     end
 
-  resources :games, only: [:index, :show]
+  resources :games, only: [:index, :show] do
+   resource :favorites, only: [:create, :destroy]
+ end
 
   get 'users/unsubscribe' => 'users#unsubscribe'
   patch 'users/withdraw' => 'users#withdraw'
