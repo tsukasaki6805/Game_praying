@@ -19,9 +19,8 @@
         <% if admin_signed_in? %>
         <!--管理者がログインしている時-->
           <li><%= link_to "登録者一覧",admin_users_path, class: 'fas fa-users nav-link text-light' %></li>
-          <li><%= link_to "投稿一覧",admin_games_path, class: 'fas fa-list nav-link text-light' %></li>
           <li><%= link_to "ログアウト",destroy_admin_session_path, method: :delete, class: 'fas fa-sign-out-alt nav-link text-light' %></li>
-        <% elsif customer_signed_in? %>
+        <% elsif user_signed_in? %>
         <!--顧客がログインしている時-->
           <li><%= link_to "マイページ",public_users_path(current_user), class: 'fas fa-user nav-link text-light' %></li>
           <li><%= link_to "投稿一覧",public_games_path, class: 'fas fa-birthday-cake nav-link text-light' %></li>

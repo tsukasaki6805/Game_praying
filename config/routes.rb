@@ -11,12 +11,12 @@ root 'homes#top'
 
 namespace :public do #namespace :usersをpublicに変更しました。
 
-  resource :users, only: [:show, :update, :edit] do
-      # 退会確認画面
-      get '/users/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
-      # 論理削除用のルーティング
-      patch '/users/withdrawal' => 'users#withdrawal', as: 'withdrawal'
-    end
+  resources :users, only: [:show, :update, :edit, :index] do
+    # 退会確認画面
+    get '/users/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
+    # 論理削除用のルーティング
+    patch '/users/withdrawal' => 'users#withdrawal', as: 'withdrawal'
+  end
 
   resources :games, only: [:index, :show] do
    resource :favorites, only: [:create, :destroy]
