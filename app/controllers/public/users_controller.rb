@@ -29,6 +29,16 @@ class Public::UsersController < ApplicationController
       render 'edit'
     end
   end
+  
+  def unsubscribe
+  end
+
+  def withdrawal
+    @user = current_user
+    current_user.update(is_deleted: true)
+    reset_session
+    redirect_to root_path
+  end
 
   private
   def user_params
