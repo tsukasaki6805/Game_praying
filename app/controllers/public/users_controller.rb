@@ -30,6 +30,18 @@ class Public::UsersController < ApplicationController
     end
   end
 
+  def followings
+    @user = User.find(params[:id])
+    @users = @user.followings
+    render 'show_follow'
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follower'
+  end
+
   def unsubscribe
   end
 

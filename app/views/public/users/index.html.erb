@@ -4,7 +4,7 @@
      <h2>User info</h2>
       <%= render 'public/users/profile', user: @user %>
       <h2>New book</h2>
-      <%= render 'games/newform', book: @book %>
+      <%= render 'public/games/newform', game: @game %>
     </div>
     <div class="col-xs-9">
       <table class="table">
@@ -21,7 +21,7 @@
 
           <tr>
             <td>
-              <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format:'jpeg', class: "pull-left profile-img", fallback:"no_image.jpg" %>
+              <%= attachment_image_tag user, :profileimage, :fill, 100, 100, format:'jpeg', class: "pull-left profile-img", fallback:"no_image.jpg" %>
             </td>
             <td>
               <%= user.nickname %>
