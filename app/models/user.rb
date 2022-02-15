@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :games, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :game_comments, dependent: :destroy
-  attachment :profile_image
+  attachment :profileimage
 
   has_many :relationships, dependent: :destroy
   has_many :followings, through: :relationships, source: :follow

@@ -1,3 +1,68 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+ //topページ用
+.top-container {
+   background-image: image-url('top-image.png');
+   background-size: cover;
+   min-height: 100vh;
+}
+
+.top {
+   width: 700px;
+   height: 280px;
+}
+
+.top-explanation{
+  width: 700px;
+  height: 280px;
+  text-align: center;
+  padding-top: 60px;
+  background-color: rgba( 255, 255, 255, 0.5);
+}
+
+.card{
+    padding: 0px;
+    width: 150px;
+    height: 250px;
+}
+
+.card-footer{
+  position: absolute;
+  bottom: 10px;
+  right: 75px;
+}
+
+.name{
+ color: #808080;
+}
+
+.list{
+  color: #FF5192;
+  background-color: rgba( 255, 255, 255, 0.5);
+}
+
+
+//aboutページ用
+.about-container {
+   background-image: image-url('about.png');
+   background-size: cover;
+    min-height: 100vh;
+
+}
+.back{
+ width: 100%;
+  min-height: 100vh;
+  padding-top: 195px;
+}
+
+.about-explanation{
+  background-color: rgba( 255, 255, 255, 0.5);
+}
+
+
+
+//top・about共通

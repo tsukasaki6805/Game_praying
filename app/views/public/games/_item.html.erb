@@ -1,10 +1,10 @@
 <% if @game.favorited_by?(current_user) %>
-    <%= link_to game_favorites_path(@game), method: :delete, remote: true do %>
+    <%= link_to public_game_favorites_path(@game), method: :delete, remote: true do %>
     　<i><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></i>
       <%= @game.favorites.count %> いいね</th>
     <% end %>
 <% else %>
-    <%= link_to game_favorites_path(@book), method: :post, remote: true do %>
+    <%= link_to public_game_favorites_path(@game), method: :post, remote: true do %>
       <i><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></i>
       <%= @game.favorites.count %> いいね
     <% end %>

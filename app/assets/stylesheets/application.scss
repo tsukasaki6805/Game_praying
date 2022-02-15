@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+
+
+.top-page-header {
+width: 100vw;
+padding: 10px 0 20px 0;
+top: 0;
+height: 24vh;
+background-image: url('header.png');
+background-repeat: no-repeat;
+background-position: center top;
+background-size: cover;
+opacity: 0.8;
+}
+
+.header-top-content{
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 10px 0 10px 0;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  padding: 1vh 0;
+}
+
+.lists-right {
+display: flex;
+list-style: none;
+margin: 0 30px 0 auto;
+}
+
+.header-title {
+font-size: 40px;
+text-decoration: none;
+color:#1a1a1a;
+font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+margin-left: 4%;
+}
+
+.header-sub-title{
+font-size: 17px;
+padding-left: 15px;
+font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+}
+
+.header-right{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+ padding: 1vh 0;
+}
+
+.header-search{
+  display: flex;
+list-style: none;
+margin: 0 10px 0 auto;
+}
+
+.pagination {
+  justify-content: center;
+}

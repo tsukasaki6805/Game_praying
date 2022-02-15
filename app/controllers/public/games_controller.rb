@@ -5,7 +5,7 @@ class Public::GamesController < ApplicationController
     @game_new = Game.new
     @user = @game.user
     @comment = GameComment.new
-    @game_comments = @game.public_game_comments
+    @game_comments = @game.game_comments
   end
 
   def index
@@ -17,7 +17,7 @@ class Public::GamesController < ApplicationController
     @game = Game.new(game_params)
     @game.user_id = current_user.id
     if @game.save
-      redirect_to @game, notice: "You have created book successfully."
+      redirect_to public_games_path, notice: "You have created book successfully."
     else
       flash[:danger] = @game.errors.full_messages
       @games = Game.all
@@ -28,7 +28,7 @@ class Public::GamesController < ApplicationController
   def edit
     @game = Game.find(params[:id])
     if current_user.id != @game.user_id
-      redirect_to games_path
+      redirect_to public_games_path
     end
   end
 
@@ -49,6 +49,6 @@ class Public::GamesController < ApplicationController
 
   private
   def game_params
-    params.require(:game).permit(:title, :body)
+    params.permit(:title, :body)
   end
 end
