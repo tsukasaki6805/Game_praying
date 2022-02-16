@@ -29,6 +29,7 @@ namespace :public do #namespace :usersをpublicに変更しました。
     resources :game_comments, only: [:create, :destroy]
   end
 
+
   get 'users/unsubscribe' => 'users#unsubscribe'
   patch 'users/withdraw' => 'users#withdraw'
 

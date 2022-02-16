@@ -74,13 +74,9 @@ font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角
   flex-wrap: wrap;
   width: 100%;
  padding: 1vh 0;
+ color:#1a1a1a;
 }
 
-.header-search{
-  display: flex;
-list-style: none;
-margin: 0 10px 0 auto;
-}
 
 .pagination {
   justify-content: center;

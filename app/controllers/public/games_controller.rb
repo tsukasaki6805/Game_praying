@@ -37,18 +37,18 @@ class Public::GamesController < ApplicationController
     if @game.update(game_params)
       redirect_to public_game_path(@game), notice: "You have updated book successfully."
     else
-      render "edit"
+      render 'edit'
     end
   end
 
-  def delete
+  def destroy
     @game = Game.find(params[:id])
-    @game.destoy
-    redirect_to games_path
+    @game.destroy
+    redirect_to public_games_path
   end
 
   private
   def game_params
-    params.permit(:title, :body)
+    params.permit(:title, :body, :image_id)
   end
 end
