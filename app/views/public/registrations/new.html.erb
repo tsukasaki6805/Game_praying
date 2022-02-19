@@ -28,6 +28,11 @@
           <%= f.label '自己紹介', class: 'col-sm-4' %><%= f.text_field :introduction, placeholder: "自己紹介文" %>
         </div>
 
+        <div>
+          <%= f.label 'アイコン写真', class: 'col-sm-3' %>
+          <%= f.attachment_field :profileimage, class: 'col-sm-8', placeholder: "アイコン" %>
+        </div>
+
         <div class='form-group'>
           <%= f.label 'パスワード', class: 'col-sm-4' %>
            <%= f.password_field :password, placeholder: "6文字以上" %>

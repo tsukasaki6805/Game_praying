@@ -11,5 +11,7 @@ class Game < ApplicationRecord
 	validates :title, :body, presence: true
 	validates :body, length: {maximum: 200}
 
+	attachment :image
+
 
 end
