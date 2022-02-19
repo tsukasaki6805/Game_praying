@@ -59,4 +59,10 @@ class Admin::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  def after_update_path_for(resource)
+    # 自分で設定した「マイページ」へのパス
+    public_users_path(current_user)
+  end
+
 end

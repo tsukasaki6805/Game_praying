@@ -42,15 +42,6 @@ class Public::UsersController < ApplicationController
     render 'show_follower'
   end
 
-  def unsubscribe
-  end
-
-  def withdrawal
-    @user = current_user
-    current_user.update(is_deleted: true)
-    reset_session
-    redirect_to root_path
-  end
 
   private
   def user_params

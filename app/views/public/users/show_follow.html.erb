@@ -15,7 +15,7 @@
            <tbody>
             <tr>
               <td>
-                 <div><%= attachment_image_tag user, :profile_image, :fill, 50, 50, format:'jpeg', class: "pull-left profile-img", fallback: "no_image.jpg" %></div>
+                 <div><%= attachment_image_tag user, :profileimage, :fill, 50, 50, format:'jpeg', class: "pull-left profile-img", fallback: "no_image.jpg" %></div>
               </td>
               <td>
                 <%= user.nickname %>
@@ -24,7 +24,7 @@
                 <%= link_to "show",public_user_path(user.id), class: "user_#{user.id}" %>
               </td>
               <td>
- 				       <%= render 'relationships/follow_button', user: user %>
+ 				       <%= render 'public/relationships/follow_button', user: user %>
                </td>
             </tr>
            </tbody>
