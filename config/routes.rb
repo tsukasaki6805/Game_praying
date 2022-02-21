@@ -39,8 +39,6 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   sessions: "admin/sessions"
 }
 
-namespace :admin do
-  resources :users, only: [:index, :edit, :show, :update]
-end
+
 
 end
