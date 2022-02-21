@@ -6,7 +6,7 @@
 
  //topページ用
 .top-container {
-   background-image: image-url('top-image.png');
+   background-image: image-url("top-image.png");
    background-size: cover;
    min-height: 100vh;
 }
@@ -48,7 +48,7 @@
 
 //aboutページ用
 .about-container {
-   background-image: image-url('about.png');
+   background-image: image-url("about.png");
    background-size: cover;
     min-height: 100vh;
 
